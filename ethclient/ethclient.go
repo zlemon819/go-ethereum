@@ -94,6 +94,11 @@ func (ec *Client) BlockByNumber(ctx context.Context, number *big.Int) (*types.Bl
 	return ec.getBlock(ctx, "eth_getBlockByNumber", toBlockNumArg(number), true)
 }
 
+// PrintHelloWorld returns "hello world".
+func (ec *Client) PrintHelloWorld(ctx context.Context) string {
+	return fmt.Sprintf("%s", "hello world")
+}
+
 // BlockNumber returns the most recent block number
 func (ec *Client) BlockNumber(ctx context.Context) (uint64, error) {
 	var result hexutil.Uint64
