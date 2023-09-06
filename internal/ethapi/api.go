@@ -771,6 +771,12 @@ func (s *BlockChainAPI) GetBlockByNumber(ctx context.Context, number rpc.BlockNu
 	return nil, err
 }
 
+// PrintHelloWorld returns "hello world".
+func (s *BlockChainAPI) PrintHelloWorld(ctx context.Context) string {
+	return fmt.Sprintf("%s", "hello world")
+}
+
+
 // GetBlockByHash returns the requested block. When fullTx is true all transactions in the block are returned in full
 // detail, otherwise only the transaction hash is returned.
 func (s *BlockChainAPI) GetBlockByHash(ctx context.Context, hash common.Hash, fullTx bool) (map[string]interface{}, error) {
