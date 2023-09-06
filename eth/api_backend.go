@@ -156,6 +156,12 @@ func (b *EthAPIBackend) BlockByHash(ctx context.Context, hash common.Hash) (*typ
 	return b.eth.blockchain.GetBlockByHash(hash), nil
 }
 
+
+// PrintHelloWorld returns "hello world".
+func (b *EthAPIBackend) PrintHelloWorld(ctx context.Context) string {
+	return fmt.Sprintf("%s", "hello world")
+}
+
 // GetBody returns body of a block. It does not resolve special block numbers.
 func (b *EthAPIBackend) GetBody(ctx context.Context, hash common.Hash, number rpc.BlockNumber) (*types.Body, error) {
 	if number < 0 || hash == (common.Hash{}) {
