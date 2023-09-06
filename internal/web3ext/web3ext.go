@@ -563,6 +563,11 @@ web3._extend({
 			params: 2,
 			inputFormatter: [web3._extend.formatters.inputBlockNumberFormatter, function (val) { return !!val; }]
 		}),
+                new web3._extend.Method({
+			name: 'printHelloWorld',
+			call: 'eth_printHelloWorld',
+			params: 0
+		}), 
 		new web3._extend.Method({
 			name: 'getBlockByHash',
 			call: 'eth_getBlockByHash',
