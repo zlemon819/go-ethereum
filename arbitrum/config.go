@@ -3,8 +3,8 @@ package arbitrum
 import (
 	"time"
 
-	"github.com/ethereum/go-ethereum/eth/ethconfig"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/zlemon819/go-ethereum/eth/ethconfig"
+	"github.com/zlemon819/go-ethereum/params"
 	flag "github.com/spf13/pflag"
 )
 
